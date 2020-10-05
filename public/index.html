@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games Mix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://nodejs-socket-chat-application.herokuapp.com/socket.io/socket.io.js"></script> -->
+    <script src="http://localhost:7030/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <center><a href="index.html"><img src="https://magicplay.eu/files/logo%5B1%5D.png" id="image" width="300px"></a>
+        </center>
+        <div class="mobile-disp">
+            <button id="nav-btn" onclick="show()"><i class="fa fa-bars" style="font-size:36px"></i></button>
+            <ul id="mob-nav">
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://nodejs-socket-chat-application.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://nodejs-socket-chat-application.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="chat-box">
+        <div id="output">
+            <div class="msg"></div>
+        </div>
+        <div id="input-box">
+            <input type="text" placeholder="Type your message" id="msg-box">
+            <button type="submit" id="send-btn" onclick="send()">Send</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    var nav = document.getElementById('mob-nav')
+    function show() {
+        if (nav.style.display == "none") {
+            nav.style.display = "flex"
+        } else {
+            nav.style.display = "none"
+        }
+    }
+</script>
+<script src="index.js"></script>
+
+</html>        heroku

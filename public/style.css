@@ -1,0 +1,228 @@
+* {
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://www.androidguys.com/wp-content/uploads/2016/04/8bit_wallpaper7.jpg");
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-color: #7dad71 !important;
+}
+#main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#image {
+  width: 250px;
+  margin: 40px auto 0 auto;
+}
+/* Desktop Navbar */
+.menu {
+  margin: 20px;
+}
+.menu ul {
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-flow: row;
+}
+.menu li {
+  margin: 20px;
+  list-style: none;
+}
+.btn {
+  padding: 10px 20px !important;
+  box-shadow: 6px 6px rgba(128, 128, 128, 0.623);
+}
+.btn:hover {
+  box-shadow: none;
+  transform: translate3d(0, 8px, -5px);
+}
+/* Mobile NavBar */
+.mobile-disp {
+  margin: 20px;
+  display: none;
+}
+.mobile-disp .fa {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-disp ul {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.mobile-disp ul li {
+  list-style-type: none;
+  margin: 10px auto;
+}
+#nav-btn {
+  width: 60%;
+  margin: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+#mob-nav {
+  display: none;
+}
+
+.mobile-disp .btn {
+  text-transform: uppercase;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 8px 8px grey;
+  font-size: 15px;
+}
+.mobile-disp > .btn:hover {
+  box-shadow: none;
+  transform: translate3d(0, 5px, -5px);
+}
+
+/* Chat-Box  */
+#chat-box {
+  width: 450px;
+  height: 600px;
+  border: solid black 1px;
+  margin: 0 auto 50px auto;
+  background-color: rgb(240, 238, 238);
+}
+
+#output {
+  padding: 10px 10px;
+  overflow: auto;
+  height: 92%;
+}
+
+.send,.rec{
+  font-size: 9px;
+  padding: 6px 11px;
+  margin-bottom: 8px;
+  clear: both;
+  border: solid black 1px;
+  margin-bottom: 8px;
+}
+
+.center{
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 9px;
+  clear: both;
+  padding: 3px;
+  width: 80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 8px;
+  border: solid 0.5px black;
+}
+.send {
+  margin-left: 50px;
+  color: white;
+  background-color: rgb(21, 21, 157);
+  float: right;
+}
+.rec {
+  margin-right: 50px;
+  background-color: white;
+  float: left;
+}
+#input-box {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#msg-box {
+  width: 84%;
+  padding: 3px;
+  font-size: 9px;
+}
+#send-btn {
+  font-size: 12px;
+  padding: 5px;
+  cursor: pointer;
+}
+#send-btn:hover {
+  background-color: lightgray;
+}
+
+@media only screen and (max-width: 330px) {
+  #chat-box {
+    width: 300px;
+    height: 500px;
+  }
+
+  #output {
+    padding: 5px 7px;
+    height: 93.5%;
+  }
+  .send,.rec {
+    font-size: 8.5px;
+    padding: 3px 8px;
+    width: 93%;
+  }
+  .center{
+    font-size: 8px;
+    padding: 2px;
+  }
+  #msg-box {
+    margin-right: 5px;
+    padding: 3px;
+  }
+  #send-btn {
+    font-size: 8px;
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #chat-box {
+    width: 350px;
+    height: 500px;
+  }
+
+  #output {
+    padding: 5px 7px;
+    height: 93.5%;
+  }
+  .send,.rec {
+    font-size: 8.5px;
+    padding: 3px 8px;
+    width: 93%;
+  }
+  .center {
+    font-size: 8px;
+    padding: 2px;
+  }
+  #msg-box {
+    margin-right: 5px;
+    padding: 3px;
+  }
+  #send-btn {
+    font-size: 8px;
+    padding: 3px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  #image {
+    width: 200px;
+  }
+  .menu {
+    display: none;
+  }
+  .mobile-disp {
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+  }
+}
