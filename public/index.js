@@ -1,4 +1,4 @@
-var socket = io.connect('https://arcade-games-mix-chatbox.herokuapp.com/')
+var socket = io.connect('https://arcade-games-mix.herokuapp.com/')
 
 var message = document.getElementById('msg-box')
 var data = document.querySelector('.msg')
