@@ -78,10 +78,10 @@ body {
 
 .mobile-disp .btn {
   text-transform: uppercase;
-  width: 150px;
+  width: 178px;
   height: 50px;
   text-align: center;
-  box-shadow: 8px 8px grey;
+  box-shadow: 8px 8px 8px grey;
   font-size: 15px;
 }
 .mobile-disp > .btn:hover {
