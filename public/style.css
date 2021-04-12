@@ -7,7 +7,7 @@
 body {
   background-position: center;
   background-size: cover;
-  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/cppimgFile/bg.jpg");
+  background-image: url("https://res.cloudinary.com/vighnesh/image/upload/v1618223969/img/bg_ebpt8m.jpg");
   overflow: auto;
   background-repeat: no-repeat;
   background-color: #7dad71 !important;
