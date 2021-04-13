@@ -5,45 +5,153 @@
 }
 
 body {
+  font-size: 10px;
   background-position: center;
   background-size: cover;
-  background-image: url("https://res.cloudinary.com/vighnesh/image/upload/v1618223969/img/bg_ebpt8m.jpg");
+  background-image: url("cppimgFile/bg.webp");
   overflow: auto;
-  background-repeat: no-repeat;
   background-color: #7dad71 !important;
 }
+
 #main {
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
 #image {
-  width: 250px;
-  margin: 40px auto 0 auto;
+  margin: 3em auto 0 auto;
 }
 /* Desktop Navbar */
 .menu {
-  margin: 20px;
+  margin: 1.5em;
 }
 .menu ul {
-  margin-bottom: 50px;
+  margin-bottom: 2em;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-flow: row;
 }
 .menu li {
-  margin: 20px;
+  margin: 1.3em;
   list-style: none;
 }
 .btn {
-  padding: 10px 20px !important;
-  box-shadow: 6px 6px rgba(128, 128, 128, 0.623);
+  padding: 0.8em 1.5em !important;
+  box-shadow: 0.4em 0.4em 0.4em rgba(128, 128, 128, 0.623);
 }
 .btn:hover {
   box-shadow: none;
   transform: translate3d(0, 8px, -5px);
 }
+
+/* About Us */
+#index-jumbotron {
+  background-color: #f8dc81 !important;
+  background-position: center bottom;
+  background-size: cover;
+  width: 80%;
+  border-radius: 2em !important;
+  margin: auto;
+  display: flex;
+}
+.title {
+  color: #a81d4d;
+  font-size: 2.2em;
+}
+#p-text {
+  color: #214151;
+}
+
+/* Creators */
+#ac {
+  margin: 1em;
+  text-align: center;
+}
+#about {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+#about .card {
+  cursor: pointer;
+  width: 16em;
+  height: 16em;
+  margin: 2em;
+  background: #fff;
+  border-radius: 0.4em;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.2);
+}
+
+#about .card::before,
+#about .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background: #fff;
+  border-radius: 0.4em;
+  z-index: -1;
+}
+#about .card:hover::before {
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.2);
+  transform: rotate(20deg);
+}
+
+#about .card:hover::after {
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.2);
+  transform: rotate(10deg);
+}
+
+.imgBx {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  bottom: 0.5em;
+  right: 0.5em;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .imgBx {
+  bottom: 4.5em;
+}
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  margin-top: 11em;
+  text-align: center;
+}
+
+.details h2 {
+  margin-top: 1em;
+  font-size: 0.88em;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.details span {
+  color: #f38695;
+  display: block;
+  margin-top: 0.4em;
+}
+
+.btn-lg {
+  font-size: 1.1em !important;
+}
+
 /* Mobile NavBar */
 .mobile-disp {
   margin: 20px;
@@ -89,138 +197,91 @@ body {
   transform: translate3d(0, 5px, -5px);
 }
 
-/* Chat-Box  */
-#chat-box {
-  width: 450px;
-  height: 600px;
-  border: solid black 1px;
-  margin: 0 auto 50px auto;
-  background-color: rgb(240, 238, 238);
-}
-
-#output {
-  padding: 10px 10px;
-  overflow: auto;
-  height: 92%;
-}
-
-.send,.rec{
-  font-size: 9px;
-  padding: 6px 11px;
-  margin-bottom: 8px;
-  clear: both;
-  border: solid black 1px;
-  margin-bottom: 8px;
-}
-
-.center{
-  margin-bottom: 8px;
-  text-align: center;
-  font-size: 9px;
-  clear: both;
-  padding: 3px;
+/* Games */
+#games {
+  justify-content: space-evenly;
   width: 80%;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-bottom: 8px;
-  border: solid 0.5px black;
-}
-.send {
-  margin-left: 50px;
-  color: white;
-  background-color: rgb(21, 21, 157);
-  float: right;
-}
-.rec {
-  margin-right: 50px;
-  background-color: white;
-  float: left;
-}
-#input-box {
-  padding: 5px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 5em;
 }
-#msg-box {
-  width: 84%;
-  padding: 3px;
-  font-size: 9px;
+#games .card {
+  padding: 0.5em;
+  margin: 1em;
 }
-#send-btn {
-  font-size: 12px;
-  padding: 5px;
-  cursor: pointer;
+#games .card-text {
+  font-size: 1.5em;
 }
-#send-btn:hover {
-  background-color: lightgray;
-}
-
-@media only screen and (max-width: 330px) {
-  #chat-box {
-    width: 300px;
-    height: 500px;
-  }
-
-  #output {
-    padding: 5px 7px;
-    height: 93.5%;
-  }
-  .send,.rec {
-    font-size: 8.5px;
-    padding: 3px 8px;
-  }
-  .center{
-    font-size: 8px;
-    padding: 2px;
-  }
-  #msg-box {
-    margin-right: 5px;
-    padding: 3px;
-  }
-  #send-btn {
-    font-size: 8px;
-    padding: 3px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  #chat-box {
-    width: 350px;
-    height: 500px;
-  }
-
-  #output {
-    padding: 5px 7px;
-    height: 93.5%;
-  }
-  .send,.rec {
-    font-size: 8.5px;
-    padding: 3px 8px;
-  }
-  .center {
-    font-size: 8px;
-    padding: 2px;
-  }
-  #msg-box {
-    margin-right: 5px;
-    padding: 3px;
-  }
-  #send-btn {
-    font-size: 8px;
-    padding: 3px;
-  }
+#games .card-title {
+  color: #fd5e53;
 }
 
 @media only screen and (max-width: 870px) {
+  body {
+    font-size: 8.5px;
+  }
+  #about {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 755px) {
+  body {
+    font-size: 8px;
+  }
   #image {
-    width: 200px;
+    width: 250px;
   }
   .menu {
     display: none;
   }
-  .mobile-disp {
+  .mobile-disp,
+  #index-jumbotron {
     justify-content: center;
     display: flex;
     flex-flow: column;
+  }
+  #about {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 1.9em;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  body {
+    font-size: 7px;
+  }
+  #image {
+    width: 250px;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+  .btn-lg {
+    font-size: 0.9em !important;
+  }
+  #index-jumbotron {
+    width: 90%;
+  }
+  .menu {
+    display: none;
+  }
+  .mobile-disp,
+  #index-jumbotron {
+    justify-content: center;
+    display: flex;
+    flex-flow: column;
+  }
+  #about {
+    flex-flow: column;
+    align-items: center;
   }
 }
