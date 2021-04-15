@@ -36,4 +36,5 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    document.getElementById("send-btn").addEventListener("click",send)
 })
