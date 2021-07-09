@@ -30,9 +30,13 @@ window.addEventListener("DOMContentLoaded", () => {
         })
         function send() {
             const mesg = message.value
-            append(`You : ${mesg}`, 'send')
-            socket.emit('send', mesg)
-            message.value = ''
+            if(mesg != null && mesg != ""){
+                append(`You : ${mesg}`, 'send')
+                socket.emit('send', mesg)
+                message.value = ''
+            }else{
+                alert("Enter something to send!!")
+            }
         }
         message.addEventListener('keypress', function (event) {
             if (event.keyCode === 13) {
