@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-    var socket = io.connect('https://game-chatbox.vercel.app/')
+    var socket = io.connect('https://arcade-games-mix-chat.glitch.me/')
     document.addEventListener('contextmenu', event => event.preventDefault())
     var message = document.getElementById('msg-box')
     var data = document.querySelector('.msg')
